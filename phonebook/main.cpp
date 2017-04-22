@@ -14,9 +14,16 @@
 using namespace std;
 #include "SuffixTrie.hpp"
 
-bool compare_nocase (const std::string& first, const std::string& second)
-{
-    return ( first == second );
+void display_result(list<string> *result){
+    list<string>::const_iterator i;
+    
+    if (result->empty()){
+        cout << "Pattern not found" << endl;
+    } else {
+        for (i = result->begin(); i != result->end(); ++i){
+            printf("%s\n", i->c_str());
+        }
+    }
 }
 
 SuffixTrie select(SuffixTrie S){
@@ -26,17 +33,20 @@ SuffixTrie select(SuffixTrie S){
     getline(cin, contact_name);
     option = stoi(contact_name);
     contact_name = "";
-    
+    list<string> *result;
     switch(option){
         case 1  :
             cout << endl << "Enter name:";
             getline(cin, contact_name);
-            S.insertSuffix(contact_name, 1);
+            S.insertSuffix(contact_name);
             break; //optional
         case 2  :
             cout << endl << "Search Name: ";
             getline(cin, contact_name);
-            S.search(contact_name);
+            result = S.search(contact_name);
+            display_result(result);
+            
+            //S.displayResults(result);
             break; //optional
         case 3:
             cout << endl << "Happy Searching";
@@ -53,8 +63,6 @@ SuffixTrie select(SuffixTrie S){
 // driver program to test above functions
 int main()
 {
-    
-    
     SuffixTrie S;
     while(1){
         try {

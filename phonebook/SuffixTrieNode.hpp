@@ -8,7 +8,6 @@
 
 #ifndef SuffixTrieNode_hpp
 #define SuffixTrieNode_hpp
-
 #include <stdio.h>
 #endif /* SuffixTrieNode_hpp */
 

@@ -12,7 +12,11 @@
 #include<queue>
 #include<list>
 using namespace std;
+#ifndef SuffixTrieNode_hpp
+#define SuffixTrieNode_hpp
 #include "SuffixTrieNode.hpp"
+#endif /* SuffixTrieNode_hpp */
+
 
 // A Suffix Trie (A Trie of all suffixes) Node
 
@@ -63,5 +67,9 @@ list<string>* SuffixTrieNode::search(string s)
     }
     
     // If there is no edge, pattern doesn’t exist in text
-    else return NULL;
+    else
+    {
+        list<string> *t = new list<string>;
+        return t;
+    }
 }

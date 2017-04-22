@@ -13,14 +13,12 @@ using namespace std;
 
 #include "SuffixTrie.hpp"
 /* Prints all occurrences of pat in the Suffix Trie S (built for text)*/
-void SuffixTrie::search(string pat)
+list<string>* SuffixTrie::search(string pat)
 {
     // Let us call recursive search function for root of Trie.
     // We get a list of all indexes (where pat is present in text) in
     // variable 'result'
-    list<string> *result;
-    std::list<std::string>::const_iterator i;
-    
+       
     /*stringstream ss;
      string s;
      ss << pat;
@@ -33,14 +31,10 @@ void SuffixTrie::search(string pat)
      }
      */
     
-    
     result = root.search(pat);
     
     // Check if the list of indexes is empty or not
-    if (result == NULL)
-        cout << "Pattern not found" << endl;
-    else
-    {
+    if (result != NULL){
         unsigned long old_size = result->size();
         result->unique();
         result->remove(pat);
@@ -48,14 +42,24 @@ void SuffixTrie::search(string pat)
         if (old_size > result->size()){
             result->push_front(pat);
         }
+    }
+    return result;
+}
+/*void displayResults(list<string> *result){
+    
+    list<string>::const_iterator i;
+    
+    if (result.empty()){
+        cout << "Pattern not found" << endl;
+    } else {
         cout << "Matched names: " << endl;
-        for (i = result->begin(); i != result->end(); ++i){
+        for (i = result.begin(); i != result.end(); ++i){
             printf("%s\n", i->c_str());
         }
     }
 }
-
-void SuffixTrie::insertSuffix(string txt, int j){
+*/
+void SuffixTrie::insertSuffix(string txt){
     
     stringstream ss;
     string s;

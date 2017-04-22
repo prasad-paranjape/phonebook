@@ -8,17 +8,22 @@
 
 #ifndef SuffixTrie_hpp
 #define SuffixTrie_hpp
-
 #include <stdio.h>
-#include "SuffixTrieNode.hpp"
 #endif /* SuffixTrie_hpp */
+
+#ifndef SuffixTrieNode_hpp
+#define SuffixTrieNode_hpp
+#include "SuffixTrieNode.hpp"
+#endif
 
 class SuffixTrie
 {
 private:
     SuffixTrieNode root;
-public:    
+public:
+    list<string> *result;
     // Function to searches a pattern in this suffix trie.
-    void search(string pat);
-    void insertSuffix(string txt, int j);
+    list<string>* search(string pat);
+    void insertSuffix(string txt);
+    //void displayResults(list<string> *result);
 };
