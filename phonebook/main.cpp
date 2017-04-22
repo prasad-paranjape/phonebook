@@ -22,14 +22,14 @@ bool compare_nocase (const std::string& first, const std::string& second)
 SuffixTrie select(SuffixTrie S){
     int option;
     string contact_name;
-    cout << endl << "1: Add name , 2: Search, 3: Exit: ";
+    cout << endl << "1) Add contact , 2) Search, 3) Exit ";
     getline(cin, contact_name);
     option = stoi(contact_name);
     contact_name = "";
     
     switch(option){
         case 1  :
-            cout << endl << "Add Name:";
+            cout << endl << "Enter name:";
             getline(cin, contact_name);
             S.insertSuffix(contact_name, 1);
             break; //optional
@@ -39,6 +39,7 @@ SuffixTrie select(SuffixTrie S){
             S.search(contact_name);
             break; //optional
         case 3:
+            cout << endl << "Happy Searching";
             exit(1);
             // you can have any number of case statements.
         default :
@@ -62,7 +63,6 @@ int main()
             cout << "Wrong input data" << endl;
             S = select(S);
         }
-        cout << "Size of S " << sizeof(S) << endl;
     }
     return 0;
 }

@@ -10,6 +10,7 @@
 		9DE607711EAAAE08007E9258 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE607701EAAAE08007E9258 /* main.cpp */; };
 		9DE607791EAB5925007E9258 /* SuffixTrieNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE607771EAB5925007E9258 /* SuffixTrieNode.cpp */; };
 		9DE6077C1EAB59B7007E9258 /* SuffixTrie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6077A1EAB59B7007E9258 /* SuffixTrie.cpp */; };
+		9DE6077E1EAB7ADF007E9258 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6077D1EAB7ADF007E9258 /* makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,12 +26,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9DE6076D1EAAAE08007E9258 /* phonebook */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = phonebook; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE6076D1EAAAE08007E9258 /* phonebook */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; includeInIndex = 0; path = phonebook; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE607701EAAAE08007E9258 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9DE607771EAB5925007E9258 /* SuffixTrieNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuffixTrieNode.cpp; sourceTree = "<group>"; };
 		9DE607781EAB5925007E9258 /* SuffixTrieNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SuffixTrieNode.hpp; sourceTree = "<group>"; };
 		9DE6077A1EAB59B7007E9258 /* SuffixTrie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuffixTrie.cpp; sourceTree = "<group>"; };
 		9DE6077B1EAB59B7007E9258 /* SuffixTrie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SuffixTrie.hpp; sourceTree = "<group>"; };
+		9DE6077D1EAB7ADF007E9258 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 		9DE607641EAAAE08007E9258 = {
 			isa = PBXGroup;
 			children = (
+				9DE6077D1EAB7ADF007E9258 /* makefile */,
 				9DE6076F1EAAAE08007E9258 /* phonebook */,
 				9DE6076E1EAAAE08007E9258 /* Products */,
 			);
@@ -130,6 +133,7 @@
 			files = (
 				9DE6077C1EAB59B7007E9258 /* SuffixTrie.cpp in Sources */,
 				9DE607791EAB5925007E9258 /* SuffixTrieNode.cpp in Sources */,
+				9DE6077E1EAB7ADF007E9258 /* makefile in Sources */,
 				9DE607711EAAAE08007E9258 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
