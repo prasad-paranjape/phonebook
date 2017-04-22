@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9DE607711EAAAE08007E9258 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE607701EAAAE08007E9258 /* main.cpp */; };
+		9DE607791EAB5925007E9258 /* SuffixTrieNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE607771EAB5925007E9258 /* SuffixTrieNode.cpp */; };
+		9DE6077C1EAB59B7007E9258 /* SuffixTrie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6077A1EAB59B7007E9258 /* SuffixTrie.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		9DE6076D1EAAAE08007E9258 /* phonebook */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = phonebook; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE607701EAAAE08007E9258 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9DE607771EAB5925007E9258 /* SuffixTrieNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuffixTrieNode.cpp; sourceTree = "<group>"; };
+		9DE607781EAB5925007E9258 /* SuffixTrieNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SuffixTrieNode.hpp; sourceTree = "<group>"; };
+		9DE6077A1EAB59B7007E9258 /* SuffixTrie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuffixTrie.cpp; sourceTree = "<group>"; };
+		9DE6077B1EAB59B7007E9258 /* SuffixTrie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SuffixTrie.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				9DE607701EAAAE08007E9258 /* main.cpp */,
+				9DE607771EAB5925007E9258 /* SuffixTrieNode.cpp */,
+				9DE607781EAB5925007E9258 /* SuffixTrieNode.hpp */,
+				9DE6077A1EAB59B7007E9258 /* SuffixTrie.cpp */,
+				9DE6077B1EAB59B7007E9258 /* SuffixTrie.hpp */,
 			);
 			path = phonebook;
 			sourceTree = "<group>";
@@ -118,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE6077C1EAB59B7007E9258 /* SuffixTrie.cpp in Sources */,
+				9DE607791EAB5925007E9258 /* SuffixTrieNode.cpp in Sources */,
 				9DE607711EAAAE08007E9258 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
