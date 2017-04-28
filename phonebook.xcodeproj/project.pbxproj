@@ -26,7 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9DE6076D1EAAAE08007E9258 /* phonebook */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; includeInIndex = 0; path = phonebook; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE6076D1EAAAE08007E9258 /* phonebook */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = phonebook; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE607701EAAAE08007E9258 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9DE607771EAB5925007E9258 /* SuffixTrieNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuffixTrieNode.cpp; sourceTree = "<group>"; };
 		9DE607781EAB5925007E9258 /* SuffixTrieNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SuffixTrieNode.hpp; sourceTree = "<group>"; };
@@ -257,6 +257,7 @@
 				9DE607761EAAAE08007E9258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

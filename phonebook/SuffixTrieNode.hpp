@@ -17,7 +17,7 @@ class SuffixTrieNode
 {
 private:
     SuffixTrieNode *children[MAX_CHAR];
-    list<string> *indexes;
+    set<string> *indexes;
 public:
     SuffixTrieNode(); // Constructor
     
@@ -27,8 +27,8 @@ public:
     
     // A function to search a pattern in subtree rooted
     // with this node.The function returns pointer to a linked
-    // list containing all indexes where pattern is present.
+    // set containing all indexes where pattern is present.
     // The returned indexes are indexes of last characters
     // of matched text.
-    list<string>* search(string pat);
+    set<string>* search(string pat);
 };

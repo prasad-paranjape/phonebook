@@ -11,15 +11,15 @@
 #include<iostream>
 #include<sstream>
 #include<queue>
-#include<list>
+#include<set>
 using namespace std;
 #include "../phonebook/SuffixTrieNode.cpp"
 #include "../phonebook/SuffixTrie.cpp"
 
 TEST_CASE( "Insert node in Suffix tree", "[insertSuffix]" ) {
-    list<string> test_result;
+    set<string> test_result;
     SuffixTrie S;
-    list<string>::const_iterator i;
+    set<string>::const_iterator i;
     SECTION("Pass : Insert node in Suffix tree"){
         S.insertSuffix("prasad");
         test_result = *S.search("prasa");

@@ -21,9 +21,9 @@ class SuffixTrie
 private:
     SuffixTrieNode root;
 public:
-    list<string> *result;
+    set<string> *result;
     // Function to searches a pattern in this suffix trie.
-    list<string>* search(string pat);
+    set<string>* search(string pat);
     void insertSuffix(string txt);
-    //void displayResults(list<string> *result);
+    //void displayResults(set<string> *result);
 };

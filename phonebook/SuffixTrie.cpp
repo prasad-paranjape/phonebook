@@ -8,46 +8,21 @@
 #include<iostream>
 #include<sstream>
 #include<queue>
-#include<list>
+#include<set>
 using namespace std;
 
 #include "SuffixTrie.hpp"
 /* Prints all occurrences of pat in the Suffix Trie S (built for text)*/
-list<string>* SuffixTrie::search(string pat)
+set<string>* SuffixTrie::search(string pat)
 {
     // Let us call recursive search function for root of Trie.
-    // We get a list of all indexes (where pat is present in text) in
+    // We get a set of all indexes (where pat is present in text) in
     // variable 'result'
-       
-    /*stringstream ss;
-     string s;
-     ss << pat;
-     cout << pat;
-     while(ss >> s){
-     cout << s;
-     i = result->begin();
-     ++i;
-     result->splice(i, *root.search(s));
-     }
-     */
-    
-    result = root.search(pat);
-    
-    // Check if the list of indexes is empty or not
-    if (result != NULL){
-        unsigned long old_size = result->size();
-        result->unique();
-        result->remove(pat);
-        result->sort();
-        if (old_size > result->size()){
-            result->push_front(pat);
-        }
-    }
-    return result;
+     return root.search(pat);
 }
-/*void displayResults(list<string> *result){
+/*void displayResults(set<string> *result){
     
-    list<string>::const_iterator i;
+    set<string>::const_iterator i;
     
     if (result.empty()){
         cout << "Pattern not found" << endl;

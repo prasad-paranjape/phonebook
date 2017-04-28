@@ -10,7 +10,7 @@
 #include<iostream>
 #include<sstream>
 #include<queue>
-#include<list>
+#include<set>
 using namespace std;
 #ifndef SuffixTrieNode_hpp
 #define SuffixTrieNode_hpp
@@ -22,9 +22,9 @@ using namespace std;
 
 SuffixTrieNode::SuffixTrieNode() // Constructor
 {
-    // Create an empty linked list for indexes of
+    // Create an empty linked set for indexes of
     // suffixes starting from this node
-    indexes = new list<string>;
+    indexes = new set<string>;
     
     // Initialize all child pointers as NULL
     for (int i = 0; i < MAX_CHAR; i++)
@@ -35,8 +35,8 @@ SuffixTrieNode::SuffixTrieNode() // Constructor
 // subtree rooted with this node
 void SuffixTrieNode::insertSuffix(string s, string index)
 {
-    // Store index in linked list
-    indexes->push_front(index);
+    // Store index in linked set
+    indexes->insert(index);
     // If string has more characters
     if (s.length() > 0)
     {
@@ -54,7 +54,7 @@ void SuffixTrieNode::insertSuffix(string s, string index)
 
 // A recursive function to search a pattern in subtree rooted with
 // this node
-list<string>* SuffixTrieNode::search(string s)
+set<string>* SuffixTrieNode::search(string s)
 {
     // If all characters of pattern have been processed,
     if (s.length() == 0)
@@ -69,7 +69,7 @@ list<string>* SuffixTrieNode::search(string s)
     // If there is no edge, pattern doesn’t exist in text
     else
     {
-        list<string> *t = new list<string>;
+        set<string> *t = new set<string>;
         return t;
     }
 }

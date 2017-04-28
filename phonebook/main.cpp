@@ -10,18 +10,17 @@
 #include<iostream>
 #include<sstream>
 #include<queue>
-#include<list>
+#include<set>
 using namespace std;
 #include "SuffixTrie.hpp"
 
-void display_result(list<string> *result){
-    list<string>::const_iterator i;
-    
+void display_result(set<string> *result){
+    set<string>::const_iterator i;
     if (result->empty()){
         cout << "Pattern not found" << endl;
     } else {
         for (i = result->begin(); i != result->end(); ++i){
-            printf("%s\n", i->c_str());
+            cout << endl << *i;
         }
     }
 }
@@ -31,9 +30,10 @@ SuffixTrie select(SuffixTrie S){
     string contact_name;
     cout << endl << "1) Add contact , 2) Search, 3) Exit ";
     getline(cin, contact_name);
+    if (!contact_name.empty()){
     option = stoi(contact_name);
     contact_name = "";
-    list<string> *result;
+    set<string> *result;
     switch(option){
         case 1  :
             cout << endl << "Enter name:";
@@ -54,6 +54,7 @@ SuffixTrie select(SuffixTrie S){
             // you can have any number of case statements.
         default :
             exit(1);
+    }
     }
     
     return S;
